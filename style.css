@@ -1,0 +1,459 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+section {
+  width: 100%;
+  height: 80vh;
+}
+section nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  position: fixed;
+  right: 0;
+  left: 0;
+  background: #e02b20;
+  z-index: 999;
+}
+
+section nav .logo img {
+  width: 300px;
+  cursor: pointer;
+}
+
+section nav ul {
+  list-style: none;
+}
+section nav ul li {
+  display: inline-block;
+  margin: 0 16px;
+}
+
+section nav ul li a {
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 18px;
+  color: white;
+}
+section nav ul li a::after {
+  content: '';
+  width: 0;
+  height: 2px;
+  background: #fff;
+  display: block;
+  transition: 0.3s linear;
+}
+
+section nav ul li a:hover::after {
+  width: 100%;
+}
+
+section nav .icon i {
+  font-size: 18px;
+  color: white;
+  margin: 0 6px;
+  cursor: pointer;
+}
+
+section .main {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  position: relative;
+  top: 130px;
+}
+
+section .main .mainText h1 {
+  font-size: 50px;
+  position: relative;
+  top: -0px;
+  left: 20px;
+}
+section .main .mainText h1 span {
+  color: #e02b20;
+}
+
+section .main .mainText button {
+  font-size: 24px;
+  padding: 12px 36px;
+  color: white;
+  background-color: #e02b20;
+  border-radius: 12px;
+  border: none;
+  position: relative;
+  left: 20px;
+  cursor: pointer;
+  margin-top: 24px;
+  transition: 0.3s;
+}
+
+section .main .mainText button:hover {
+  background-color: #f7473e;
+}
+
+.about {
+  width: 100%;
+  height: 100vh;
+  padding: 70px 0;
+}
+
+.about .aboutMain {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.about .aboutMain .aboutPic img {
+  width: 640px;
+}
+
+.about .aboutMain .aboutText {
+  padding-left: 24px;
+}
+.about .aboutMain .aboutText h1 {
+  font-size: 50px;
+  position: relative;
+  bottom: 34px;
+}
+
+.about .aboutMain .aboutText h1 span {
+  color: #e02b20;
+}
+.about .aboutMain .aboutText h3 {
+  font-size: 30px;
+  padding-bottom: 24px;
+}
+.about .aboutMain .aboutText p {
+  color: rgb(44, 44, 44);
+  text-align: justify;
+  padding-right: 26px;
+}
+
+.menu {
+  width: 100%;
+  padding: 70px 0;
+}
+.menu h1 {
+  font-size: 55px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+.menu h1 span {
+  color: #e02b20;
+  margin-left: 15px;
+}
+
+.menu .menuBox {
+  width: 95%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 15px;
+}
+
+.menu .menuBox .menuCard {
+  width: 325px;
+  height: 480px;
+  padding-top: 10px;
+  margin-bottom: 20px;
+  box-shadow: 1px 1px 10px rgba(9, 9, 9, 0.458);
+}
+
+.menu .menuBox .menuCard .menuPic {
+  width: 300px;
+  height: 240px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.menu .menuBox .menuCard .menuPic img {
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+  transition: 0.3s linear;
+}
+
+.menu .menuBox .menuCard .menuPic img:hover {
+  transform: scale(1.1);
+}
+
+.menu .menuBox .menuCard .smallCard {
+  width: 45px;
+  height: 45px;
+  float: right;
+  position: relative;
+  top: -240px;
+  right: 10px;
+  opacity: 1;
+  border-radius: 15px;
+}
+
+.menu .menuBox .menuCard .smallCard i {
+  font-size: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 50px;
+  color: white;
+  cursor: pointer;
+  text-shadow: 0 0 6px black;
+  transition: 0.2s;
+}
+
+.menu .menuBox .menuCard .smallCard i:hover {
+  color: #e02b20;
+  text-shadow: 0 0 6px #e02b20;
+}
+
+.menu .menuBox .menuCard .menuInfo h2 {
+  width: 60%;
+  text-align: center;
+  margin: 10px auto;
+  font-size: 25px;
+  color: #e02b20;
+}
+
+.menu .menuBox .menuCard .menuInfo p {
+  text-align: center;
+  margin-top: 8px;
+  line-height: 21px;
+}
+
+.menu .menuBox .menuCard .menuInfo h3 {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.menu .menuBox .menuCard .menuInfo .menuIcon {
+  color: #fac031;
+  text-align: center;
+  margin: 10px 0 20px 0;
+}
+
+.menu .menuBox .menuCard .menuInfo .menuBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: #fff;
+  background-color: #e02b20;
+  padding: 8px 12px;
+  margin: 0 80px;
+  transition: 0.2s;
+  border: none;
+  border-radius: 8px;
+}
+
+.menu .menuBox .menuCard .menuInfo .menuBtn:hover {
+  background-color: #f7473e;
+}
+
+.gallary {
+  width: 100%;
+  padding: 70px 0;
+}
+
+.gallary h1 {
+  font-size: 55px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.gallary h1 span {
+  color: #e02b20;
+  margin-left: 15px;
+}
+
+.gallary .gallaryPicBox {
+  width: 95%;
+  margin: 10px auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 10px;
+}
+
+.gallary .gallaryPicBox .gallaryPic {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: black;
+}
+
+.gallary .gallaryPicBox .gallaryPic img {
+  width: 100%;
+  transition: 0.2s;
+}
+.gallary .gallaryPicBox .gallaryPic:hover img {
+  opacity: 0.4;
+}
+
+.gallary .gallaryPicBox .gallaryPic h3 {
+  position: absolute;
+  font-size: 50px;
+  margin-bottom: 130px;
+  color: #fd857e;
+  z-index: 5;
+  opacity: 0;
+  transition: 0.2s;
+}
+
+.gallary .gallaryPicBox .gallaryPic:hover h3 {
+  opacity: 1;
+}
+
+.gallary .gallaryPicBox .gallaryPic p {
+  position: absolute;
+  width: 400px;
+  margin-top: 30px;
+  text-align: center;
+  color: white;
+  line-height: 22px;
+  opacity: 0;
+  z-index: 5;
+  transition: 0.2s;
+}
+
+.gallary .gallaryPicBox .gallaryPic:hover p {
+  opacity: 1;
+}
+
+.gallary .gallaryPicBox .gallaryPic .gallaryBtn {
+  position: absolute;
+  margin-top: 180px;
+  color: #fff;
+  background-color: #e02b20;
+  padding: 8px 24px;
+  text-decoration: none;
+  transition: 0.2s;
+  border: none;
+  border-radius: 8px;
+  opacity: 0;
+  z-index: 5;
+  transition: 0.2s;
+}
+
+.gallary .gallaryPicBox .gallaryPic:hover .gallaryBtn {
+  opacity: 1;
+}
+
+.order {
+  width: 100%;
+  height: 100vh;
+  padding: 70px 0;
+}
+
+.order h1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 55px;
+  margin-bottom: 60px;
+}
+
+.order h1 span {
+  color: #e02b20;
+  margin-right: 15px;
+}
+
+.order .orderMain {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.order .orderMain .orderPic img {
+  width: 600px;
+}
+
+.order .orderMain form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 0 10px;
+}
+
+.order .orderMain form .input p {
+  line-height: 25px;
+}
+
+.order .orderMain form .input {
+  margin: 5px;
+}
+
+.order .orderMain form .input input {
+  width: 300px;
+  height: 35px;
+  padding: 0 10px;
+  border: 2px solid #ccc;
+  background-color: #eee;
+  outline: none;
+  border-radius: 3px;
+}
+
+.order .orderMain form .input input:focus {
+  border: 2px solid #e02b20;
+}
+
+.order .orderMain form .orderBtn {
+  padding: 10px 0px;
+  background-color: #e02b20;
+  color: white;
+  width: 40%;
+  text-align: center;
+  margin-top: 20px;
+  text-decoration: none;
+  border: none;
+  border-radius: 12px;
+  transition: 0.2s;
+}
+
+.order .orderMain form .orderBtn:hover {
+  background-color: #f7473e;
+}
+
+footer {
+  width: 100%;
+  padding: 30px 0 0 20px;
+  background-color: #eee;
+  padding: 90px 0;
+}
+
+footer .footerMain {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+footer .footerMain .footerTag {
+  text-align: center;
+}
+
+footer .footerMain .footerTag h2 {
+  margin-bottom: 25px;
+  font-size: 30px;
+}
+
+footer .footerMain .footerTag i {
+  margin: 0 5px;
+  font-size: 30px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+footer .footerMain .footerTag i:hover {
+  color: #e02b20;
+}
+
+footer .footerMain .footerTag p span {
+  color: #e02b20;
+}
